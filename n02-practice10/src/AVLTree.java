@@ -1,12 +1,11 @@
-import java.util.ArrayList;
-
 public class AVLTree {
+    //класс реализующий узлы
     private class Element {
-        protected Element left;
-        protected Element right;
-        protected int value;
+        protected Element left; // указатель на левый дочерний узел
+        protected Element right; // указатель на правый дочерний узел
+        protected int value; // значение текущего узла
 
-        protected int height;
+        protected int height; // высота поддерева с корнем в этом узле
 
         Element(int value) {
             this(null, null, value);
@@ -20,7 +19,7 @@ public class AVLTree {
         }
     }
 
-    private Element root;
+    private Element root;// корневой элемент
 
     public AVLTree (int[] arr) {
         this.root = new Element(arr[0]);
