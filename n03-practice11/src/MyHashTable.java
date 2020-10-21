@@ -9,10 +9,6 @@ public class MyHashTable {
         Arrays.fill(subscriptions, null);
     }
 
-    public void add(int number, String fullName, String address) {
-        add(new ReaderSubscription(number, fullName, address));
-    }
-
     public void add(ReaderSubscription readerSubscription) {
         int index = getIndex(readerSubscription.getNumber());
 
@@ -53,10 +49,6 @@ public class MyHashTable {
         }
     }
 
-    public boolean has(int number, String fullName, String address) {
-        return has(new ReaderSubscription(number, fullName, address));
-    }
-
     public boolean has(ReaderSubscription readerSubscription) {
         int index = getIndex(readerSubscription.getNumber());
 
@@ -67,10 +59,6 @@ public class MyHashTable {
         }
 
         return false;
-    }
-
-    public void delete(int number, String fullName, String address) {
-        delete(new ReaderSubscription(number, fullName, address));
     }
 
     public void delete(ReaderSubscription readerSubscription) {
